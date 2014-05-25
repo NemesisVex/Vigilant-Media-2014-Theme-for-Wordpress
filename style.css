@@ -40,3 +40,7 @@ Text Domain: vigilantmedia2014
 .says {
 	display: none;
 }
+
+.content-area {
+	border-right: 1px solid #CCC;
+}

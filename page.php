@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<div id="main-content" class="main-content col-md-7">
+<div id="main-content" class="main-content row">
 
 <?php
 	if ( is_front_page() && vigilantmedia2014_has_featured_posts() ) {
@@ -21,7 +21,7 @@ get_header(); ?>
 		get_template_part( 'featured-content' );
 	}
 ?>
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area col-md-8">
 		<div id="content" class="site-content" role="main">
 
 			<?php
@@ -40,9 +40,11 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-	<?php get_sidebar( 'content' ); ?>
+	<?php
+		get_sidebar( 'content' );
+		get_sidebar();
+	?>
 </div><!-- #main-content -->
 
 <?php
-get_sidebar();
 get_footer();
