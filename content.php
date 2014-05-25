@@ -29,7 +29,7 @@
 		?>
 
 		<div class="entry-meta">
-			<ul class="list-inline">
+			<ul class="list-inline entry-meta-list">
 			<?php
 				if ( 'post' == get_post_type() )
 					vigilantmedia2014_posted_on();
