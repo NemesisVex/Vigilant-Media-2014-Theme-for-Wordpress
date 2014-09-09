@@ -28,28 +28,28 @@ get_header(); ?>
 				<h2 class="archive-title">
 					<?php
 						if ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'musicwhore2014' );
+							_e( 'Asides', 'vigilantmedia2014' );
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'musicwhore2014' );
+							_e( 'Images', 'vigilantmedia2014' );
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'musicwhore2014' );
+							_e( 'Videos', 'vigilantmedia2014' );
 
 						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audio', 'musicwhore2014' );
+							_e( 'Audio', 'vigilantmedia2014' );
 
 						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'musicwhore2014' );
+							_e( 'Quotes', 'vigilantmedia2014' );
 
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'musicwhore2014' );
+							_e( 'Links', 'vigilantmedia2014' );
 
 						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'musicwhore2014' );
+							_e( 'Galleries', 'vigilantmedia2014' );
 
 						else :
-							_e( 'Archives', 'musicwhore2014' );
+							_e( 'Archives', 'vigilantmedia2014' );
 
 						endif;
 					?>
