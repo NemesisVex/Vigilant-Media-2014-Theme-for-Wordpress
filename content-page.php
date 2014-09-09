@@ -19,13 +19,13 @@
 		<?php
 			the_content();
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'musicwhore2014' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'vigilantmedia2014' ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
 			) );
 
-			edit_post_link( __( 'Edit', 'musicwhore2014' ), '<span class="glyphicon glyphicon-pencil"></span> <span class="edit-link">', '</span>' );
+			edit_post_link( __( 'Edit', 'vigilantmedia2014' ), '<span class="glyphicon glyphicon-pencil"></span> <span class="edit-link">', '</span>' );
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

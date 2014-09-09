@@ -16,8 +16,8 @@
  */
 function vigilantmedia2014_customize_register( $wp_customize ) {
 	// Add custom description to Colors and Background sections.
-	$wp_customize->get_section( 'colors' )->description           = __( 'Background may only be visible on wide screens.', 'musicwhore2014' );
-	$wp_customize->get_section( 'background_image' )->description = __( 'Background may only be visible on wide screens.', 'musicwhore2014' );
+	$wp_customize->get_section( 'colors' )->description           = __( 'Background may only be visible on wide screens.', 'vigilantmedia2014' );
+	$wp_customize->get_section( 'background_image' )->description = __( 'Background may only be visible on wide screens.', 'vigilantmedia2014' );
 
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
@@ -25,16 +25,16 @@ function vigilantmedia2014_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	// Rename the label to "Site Title Color" because this only affects the site title in this theme.
-	$wp_customize->get_control( 'header_textcolor' )->label = __( 'Site Title Color', 'musicwhore2014' );
+	$wp_customize->get_control( 'header_textcolor' )->label = __( 'Site Title Color', 'vigilantmedia2014' );
 
 	// Rename the label to "Display Site Title & Tagline" in order to make this option extra clear.
-	$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title &amp; Tagline', 'musicwhore2014' );
+	$wp_customize->get_control( 'display_header_text' )->label = __( 'Display Site Title &amp; Tagline', 'vigilantmedia2014' );
 
 	// Add the featured content section in case it's not already there.
 	$wp_customize->add_section( 'featured_content', array(
-		'title'       => __( 'Featured Content', 'musicwhore2014' ),
-		'description' => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'musicwhore2014' ),
-			esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'musicwhore2014' ), admin_url( 'edit.php' ) ) ),
+		'title'       => __( 'Featured Content', 'vigilantmedia2014' ),
+		'description' => sprintf( __( 'Use a <a href="%1$s">tag</a> to feature your posts. If no posts match the tag, <a href="%2$s">sticky posts</a> will be displayed instead.', 'vigilantmedia2014' ),
+			esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'vigilantmedia2014' ), admin_url( 'edit.php' ) ) ),
 			admin_url( 'edit.php?show_sticky=1' )
 		),
 		'priority'    => 130,
@@ -47,12 +47,12 @@ function vigilantmedia2014_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'featured_content_layout', array(
-		'label'   => __( 'Layout', 'musicwhore2014' ),
+		'label'   => __( 'Layout', 'vigilantmedia2014' ),
 		'section' => 'featured_content',
 		'type'    => 'select',
 		'choices' => array(
-			'grid'   => __( 'Grid',   'musicwhore2014' ),
-			'slider' => __( 'Slider', 'musicwhore2014' ),
+			'grid'   => __( 'Grid',   'vigilantmedia2014' ),
+			'slider' => __( 'Slider', 'vigilantmedia2014' ),
 		),
 	) );
 }
@@ -95,13 +95,13 @@ function vigilantmedia2014_contextual_help() {
 	}
 
 	get_current_screen()->add_help_tab( array(
-		'id'      => 'musicwhore2014',
-		'title'   => __( 'Twenty Fourteen', 'musicwhore2014' ),
+		'id'      => 'vigilantmedia2014',
+		'title'   => __( 'Twenty Fourteen', 'vigilantmedia2014' ),
 		'content' =>
 			'<ul>' .
-				'<li>' . sprintf( __( 'The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by a <a href="%1$s">tag</a>; you can change the tag and layout in <a href="%2$s">Appearance &rarr; Customize</a>. If no posts match the tag, <a href="%3$s">sticky posts</a> will be displayed instead.', 'musicwhore2014' ), esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'musicwhore2014' ), admin_url( 'edit.php' ) ) ), admin_url( 'customize.php' ), admin_url( 'edit.php?show_sticky=1' ) ) . '</li>' .
-				'<li>' . sprintf( __( 'Enhance your site design by using <a href="%s">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Twenty Fourteen uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page.', 'musicwhore2014' ), 'http://codex.wordpress.org/Post_Thumbnails#Setting_a_Post_Thumbnail' ) . '</li>' .
-				'<li>' . sprintf( __( 'For an in-depth tutorial, and more tips and tricks, visit the <a href="%s">Twenty Fourteen documentation</a>.', 'musicwhore2014' ), 'http://codex.wordpress.org/Twenty_Fourteen' ) . '</li>' .
+				'<li>' . sprintf( __( 'The home page features your choice of up to 6 posts prominently displayed in a grid or slider, controlled by a <a href="%1$s">tag</a>; you can change the tag and layout in <a href="%2$s">Appearance &rarr; Customize</a>. If no posts match the tag, <a href="%3$s">sticky posts</a> will be displayed instead.', 'vigilantmedia2014' ), esc_url( add_query_arg( 'tag', _x( 'featured', 'featured content default tag slug', 'vigilantmedia2014' ), admin_url( 'edit.php' ) ) ), admin_url( 'customize.php' ), admin_url( 'edit.php?show_sticky=1' ) ) . '</li>' .
+				'<li>' . sprintf( __( 'Enhance your site design by using <a href="%s">Featured Images</a> for posts you&rsquo;d like to stand out (also known as post thumbnails). This allows you to associate an image with your post without inserting it. Twenty Fourteen uses featured images for posts and pages&mdash;above the title&mdash;and in the Featured Content area on the home page.', 'vigilantmedia2014' ), 'http://codex.wordpress.org/Post_Thumbnails#Setting_a_Post_Thumbnail' ) . '</li>' .
+				'<li>' . sprintf( __( 'For an in-depth tutorial, and more tips and tricks, visit the <a href="%s">Twenty Fourteen documentation</a>.', 'vigilantmedia2014' ), 'http://codex.wordpress.org/Twenty_Fourteen' ) . '</li>' .
 			'</ul>',
 	) );
 }

@@ -51,8 +51,8 @@
 			<nav id="primary-navigation" class="site-navigation primary-navigation navbar navbar-default navbar-static-top" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-nav"><?php /*_e( 'Primary Menu', 'musicwhore2014' );*/ ?>
-							<a class="screen-reader-text skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'musicwhore2014' ); ?></a>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-nav"><?php /*_e( 'Primary Menu', 'vigilantmedia2014' );*/ ?>
+							<a class="screen-reader-text skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'vigilantmedia2014' ); ?></a>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>

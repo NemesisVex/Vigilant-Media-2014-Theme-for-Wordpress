@@ -29,16 +29,16 @@ get_header(); ?>
 				<h2 class="page-title">
 					<?php
 						if ( is_day() ) :
-							printf( __( 'Daily Archives: %s', 'musicwhore2014' ), get_the_date() );
+							printf( __( 'Daily Archives: %s', 'vigilantmedia2014' ), get_the_date() );
 
 						elseif ( is_month() ) :
-							printf( __( 'Monthly Archives: %s', 'musicwhore2014' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'musicwhore2014' ) ) );
+							printf( __( 'Monthly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'vigilantmedia2014' ) ) );
 
 						elseif ( is_year() ) :
-							printf( __( 'Yearly Archives: %s', 'musicwhore2014' ), get_the_date( _x( 'Y', 'yearly archives date format', 'musicwhore2014' ) ) );
+							printf( __( 'Yearly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'Y', 'yearly archives date format', 'vigilantmedia2014' ) ) );
 
 						else :
-							_e( 'Archives', 'musicwhore2014' );
+							_e( 'Archives', 'vigilantmedia2014' );
 
 						endif;
 					?>

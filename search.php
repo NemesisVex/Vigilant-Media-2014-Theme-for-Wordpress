@@ -15,7 +15,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'musicwhore2014' ), get_search_query() ); ?></h2>
+				<h2 class="page-title"><?php printf( __( 'Search Results for: %s', 'vigilantmedia2014' ), get_search_query() ); ?></h2>
 			</header><!-- .page-header -->
 
 				<?php
