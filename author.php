@@ -29,7 +29,7 @@ get_header(); ?>
 						 */
 						the_post();
 
-						printf( __( 'All posts by %s', 'musicwhore2014' ), get_the_author() );
+						printf( __( 'All posts by %s', 'vigilantmedia2014' ), get_the_author() );
 					?>
 				</h2>
 				<?php if ( get_the_author_meta( 'description' ) ) : ?>

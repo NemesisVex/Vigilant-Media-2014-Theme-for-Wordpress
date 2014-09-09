@@ -35,24 +35,25 @@ function vigilantmedia2014_paging_nav() {
 	$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
 
 	// Set up paginated links.
-	$links = paginate_links( array(
+	$pagination_args = array(
 		'base'     => $pagenum_link,
 		'format'   => $format,
 		'total'    => $GLOBALS['wp_query']->max_num_pages,
 		'current'  => $paged,
 		'mid_size' => 1,
 		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '&larr; Previous', 'musicwhore2014' ),
-		'next_text' => __( 'Next &rarr;', 'musicwhore2014' ),
+		'prev_text' => __( '&larr; Previous', 'vigilantmedia2014' ),
+		'next_text' => __( 'Next &rarr;', 'vigilantmedia2014' ),
 		'type' => 'list',
 		'list_class' => 'pagination',
-	) );
+	);
+	$links = ( function_exists( 'bootstrap_paginate_links' ) ) ? bootstrap_paginate_links($pagination_args) : paginate_links( $pagination_args );
 
 	if ( $links ) :
 
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h4 class="screen-reader-text sr-only"><?php _e( 'Posts navigation', 'musicwhore2014' ); ?></h4>
+		<h4 class="screen-reader-text sr-only"><?php _e( 'Posts navigation', 'vigilantmedia2014' ); ?></h4>
 		<div class="pagination loop-pagination">
 			<?php echo $links; ?>
 		</div><!-- .pagination -->
@@ -79,14 +80,14 @@ function vigilantmedia2014_post_nav() {
 
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h4 class="screen-reader-text sr-only"><?php _e( 'Post navigation', 'musicwhore2014' ); ?></h4>
+		<h4 class="screen-reader-text sr-only"><?php _e( 'Post navigation', 'vigilantmedia2014' ); ?></h4>
 		<div class="nav-links">
 			<ul class="pager">
 			<?php if ( is_attachment() ) : ?>
-				<li><?php previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'musicwhore2014' ) ); ?></li>
+				<li><?php previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'vigilantmedia2014' ) ); ?></li>
 			<?php else : ?>
-				<li><?php previous_post_link( '%link', __( '<span class="meta-nav" title="Previous Post: %title">Previous</span>', 'musicwhore2014' ) ); ?></li>
-				<li><?php next_post_link( '%link', __( '<span class="meta-nav" title="Next Post: %title">Next</span>', 'musicwhore2014' ) ); ?></li>
+				<li><?php previous_post_link( '%link', __( '<span class="meta-nav" title="Previous Post: %title">Previous</span>', 'vigilantmedia2014' ) ); ?></li>
+				<li><?php next_post_link( '%link', __( '<span class="meta-nav" title="Next Post: %title">Next</span>', 'vigilantmedia2014' ) ); ?></li>
 			<?php endif; ?>
 			</ul>
 		</div><!-- .nav-links -->
@@ -103,7 +104,7 @@ if ( ! function_exists( 'vigilantmedia2014_posted_on' ) ) :
  */
 function vigilantmedia2014_posted_on() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
-		echo '<li><span class="glyphicon glyphicon-star"></span> <span class="featured-post">' . __( 'Sticky', 'musicwhore2014' ) . '</span></li>';
+		echo '<li><span class="glyphicon glyphicon-star"></span> <span class="featured-post">' . __( 'Sticky', 'vigilantmedia2014' ) . '</span></li>';
 	}
 
 	// Set up and print post meta information.
@@ -177,7 +178,7 @@ function vigilantmedia2014_post_thumbnail() {
 	<div class="post-thumbnail">
 	<?php
 		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'musicwhore2014-full-width' );
+			the_post_thumbnail( 'vigilantmedia2014-full-width' );
 		} else {
 			the_post_thumbnail();
 		}
@@ -189,7 +190,7 @@ function vigilantmedia2014_post_thumbnail() {
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 	<?php
 		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'musicwhore2014-full-width' );
+			the_post_thumbnail( 'vigilantmedia2014-full-width' );
 		} else {
 			the_post_thumbnail();
 		}

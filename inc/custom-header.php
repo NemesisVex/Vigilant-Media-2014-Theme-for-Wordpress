@@ -63,7 +63,7 @@ function vigilantmedia2014_header_style() {
 
 	// If we get this far, we have custom styles.
 	?>
-	<style type="text/css" id="musicwhore2014-header-css">
+	<style type="text/css" id="vigilantmedia2014-header-css">
 	<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
@@ -98,7 +98,7 @@ if ( ! function_exists( 'vigilantmedia2014_admin_header_style' ) ) :
  */
 function vigilantmedia2014_admin_header_style() {
 ?>
-	<style type="text/css" id="musicwhore2014-admin-header-css">
+	<style type="text/css" id="vigilantmedia2014-admin-header-css">
 	.appearance_page_custom-header #headimg {
 		background-color: #000;
 		border: none;

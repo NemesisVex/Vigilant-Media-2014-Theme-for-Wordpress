@@ -16,7 +16,7 @@
 			if ( 'grid' == get_theme_mod( 'featured_content_layout' ) ) {
 				the_post_thumbnail();
 			} else {
-				the_post_thumbnail( 'musicwhore2014-full-width' );
+				the_post_thumbnail( 'vigilantmedia2014-full-width' );
 			}
 		endif;
 	?>
@@ -25,7 +25,7 @@
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && vigilantmedia2014_categorized_blog() ) : ?>
 		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'musicwhore2014' ) ); ?></span>
+			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'vigilantmedia2014' ) ); ?></span>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 

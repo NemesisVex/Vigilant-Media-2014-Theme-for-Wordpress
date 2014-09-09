@@ -18,7 +18,7 @@
 
 			<div class="site-info">
 				<?php do_action( 'vigilantmedia2014_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'musicwhore2014' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'musicwhore2014' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'vigilantmedia2014' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'vigilantmedia2014' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->

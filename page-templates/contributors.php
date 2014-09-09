@@ -32,7 +32,7 @@ get_header(); ?>
 					// Output the authors list.
 					vigilantmedia2014_list_authors();
 
-					edit_post_link( __( 'Edit', 'musicwhore2014' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' );
+					edit_post_link( __( 'Edit', 'vigilantmedia2014' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' );
 				?>
 			</article><!-- #post-## -->
 
