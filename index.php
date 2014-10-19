@@ -20,16 +20,15 @@
 
 		<div class="col-md-8">
 
-			<?php if ( have_posts() ) :
-					while ( have_posts() ) : // Start the Loop.
-						the_post();
-						get_template_part( 'content', get_post_format() ); //Include the post format-specific template for the content. If you want to use this in a child theme, then include a file called called content-___.php (where ___ is the post format) and that will be used instead.
-					endwhile;
-					vigilantmedia2014_paging_nav(); // Previous/next post navigation.
-				else :
-					get_template_part( 'content', 'none' ); // If no content, include the "No posts found" template.
-				endif;
-			?>
+			<?php if ( have_posts() ) : ?>
+				<?php while ( have_posts() ) : // Start the Loop. ?>
+					<?php the_post(); ?>
+					<?php get_template_part( 'content', get_post_format() ); //Include the post format-specific template for the content. If you want to use this in a child theme, then include a file called called content-___.php (where ___ is the post format) and that will be used instead. ?>
+				<?php endwhile; ?>
+				<?php VigilantMedia2014_Template_Tags::paging_nav(); // Previous/next post navigation. ?>
+			<?php else : ?>
+				<?php get_template_part( 'content', 'none' ); // If no content, include the "No posts found" template. ?>
+			<?php endif; ?>
 
 		</div><!-- #primary -->
 		<?php get_sidebar(); ?>

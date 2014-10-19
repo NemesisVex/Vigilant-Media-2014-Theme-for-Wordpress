@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 1.0
+ * @subpackage VigilantMedia2014 2.1
  */
 ?>
 <div class="col-md-4">
