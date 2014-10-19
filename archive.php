@@ -21,7 +21,7 @@
 
 <div class="row">
 
-	<section id="primary" class="content-area col-md-8">
+	<section class="col-md-8">
 
 	<?php if ( have_posts() ) : ?>
 

@@ -18,7 +18,7 @@
 
 	<div class="row">
 
-		<div class="col-md-8">
+		<section class="col-md-8">
 
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : // Start the Loop. ?>
@@ -30,7 +30,7 @@
 				<?php get_template_part( 'content', 'none' ); // If no content, include the "No posts found" template. ?>
 			<?php endif; ?>
 
-		</div><!-- #primary -->
+		</section><!-- #primary -->
 		<?php get_sidebar(); ?>
 	</div><!-- #main-content -->
 
