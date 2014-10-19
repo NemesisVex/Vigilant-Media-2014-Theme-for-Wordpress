@@ -25,8 +25,8 @@
 
 	<?php if ( have_posts() ) : ?>
 
-		<header class="page-header">
-			<h2 class="page-title">
+		<header>
+			<h2>
 				<?php if ( is_day() ) : ?>
 					<?php printf( __( 'Daily Archives: %s', 'vigilantmedia2014' ), get_the_date() ); ?>
 				<?php elseif ( is_month() ) : ?>
