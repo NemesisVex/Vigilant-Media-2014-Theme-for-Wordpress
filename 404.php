@@ -4,14 +4,14 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 1.0
+ * @subpackage VigilantMedia2014 2.1
  */
+?>
+<?php get_header(); ?>
 
-get_header(); ?>
+	<div class="row">
 
-
-	<div id="primary" class="content-area col-md-8">
-		<div id="content" class="site-content" role="main">
+		<div class="col-md-8">
 
 			<header class="page-header">
 				<h2 class="page-title"><?php _e( 'Not Found', 'vigilantmedia2014' ); ?></h2>
@@ -24,9 +24,8 @@ get_header(); ?>
 			</div><!-- .page-content -->
 
 		</div><!-- #content -->
+		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
 get_footer();
