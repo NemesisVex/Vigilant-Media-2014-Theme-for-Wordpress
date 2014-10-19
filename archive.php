@@ -14,64 +14,41 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 1.0
+ * @subpackage VigilantMedia2014 2.1
  */
-
-get_header(); ?>
+?>
+<?php get_header(); ?>
 
 <div class="row">
-	<section id="primary" class="content-area col-md-8">
-		<div id="content" class="site-content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+	<section class="col-md-8">
 
-			<header class="page-header">
-				<h2 class="page-title">
-					<?php
-						if ( is_day() ) :
-							printf( __( 'Daily Archives: %s', 'vigilantmedia2014' ), get_the_date() );
+	<?php if ( have_posts() ) : ?>
 
-						elseif ( is_month() ) :
-							printf( __( 'Monthly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'vigilantmedia2014' ) ) );
+		<header class="page-header">
+			<h2 class="page-title">
+				<?php if ( is_day() ) : ?>
+					<?php printf( __( 'Daily Archives: %s', 'vigilantmedia2014' ), get_the_date() ); ?>
+				<?php elseif ( is_month() ) : ?>
+					<?php printf( __( 'Monthly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'vigilantmedia2014' ) ) ); ?>
+				<?php elseif ( is_year() ) : ?>
+					<?php printf( __( 'Yearly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'Y', 'yearly archives date format', 'vigilantmedia2014' ) ) ); ?>
+				<?php else : ?>
+					<?php _e( 'Archives', 'vigilantmedia2014' ); ?>
+				<?php endif; ?>
+			</h2>
+		</header><!-- .page-header -->
 
-						elseif ( is_year() ) :
-							printf( __( 'Yearly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'Y', 'yearly archives date format', 'vigilantmedia2014' ) ) );
+		<?php while ( have_posts() ) : the_post(); // Start the Loop. ?>
+			<?php get_template_part( 'content', get_post_format() ); // Include the post format-specific template for the content. If you want to use this in a child theme, then include a file called called content-___.php (where ___ is the post format) and that will be used instead. ?>
+		<?php endwhile; ?>
+		<?php VigilantMedia2014_Template_Tags::paging_nav(); // Previous/next page navigation. ?>
+	<?php else : ?>
+		<?php get_template_part( 'content', 'none' ); // If no content, include the "No posts found" template. ?>
+	<?php endif; ?>
 
-						else :
-							_e( 'Archives', 'vigilantmedia2014' );
-
-						endif;
-					?>
-				</h2>
-			</header><!-- .page-header -->
-
-			<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
-
-						/*
-						 * Include the post format-specific template for the content. If you want to
-						 * use this in a child theme, then include a file called called content-___.php
-						 * (where ___ is the post format) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-
-					endwhile;
-					// Previous/next page navigation.
-					vigilantmedia2014_paging_nav();
-
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
-
-				endif;
-			?>
-		</div><!-- #content -->
 	</section><!-- #primary -->
-	<?php
-		get_sidebar( 'content' );
-		get_sidebar();
-	?>
+	<?php get_sidebar(); ?>
 </div>
 <?php
 get_footer();
