@@ -6,6 +6,8 @@
  * @subpackage VigilantMedia2014
  * @subpackage VigilantMedia2014 2.1
  */
+
+namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
 ?>
 <div class="col-md-4">
 	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
