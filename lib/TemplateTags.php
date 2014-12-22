@@ -6,7 +6,9 @@
  * Time: 9:28 PM
  */
 
-class VigilantMedia2014_Template_Tags {
+namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
+
+class TemplateTags {
 	public static function get_cdn_uri() {
 		return VIGILANTMEDIA_CDN_BASE_URI;
 	}
@@ -40,8 +42,8 @@ class VigilantMedia2014_Template_Tags {
 			'current'  => $paged,
 			'mid_size' => 1,
 			'add_args' => array_map( 'urlencode', $query_args ),
-			'prev_text' => __( '&larr; Previous', 'musicwhore2014' ),
-			'next_text' => __( 'Next &rarr;', 'musicwhore2014' ),
+			'prev_text' => __( '&larr; Previous', WP_TEXT_DOMAIN ),
+			'next_text' => __( 'Next &rarr;', WP_TEXT_DOMAIN ),
 			'type' => 'list',
 			'list_class' => 'pagination',
 		);
@@ -51,7 +53,7 @@ class VigilantMedia2014_Template_Tags {
 
 			?>
 			<nav role="navigation">
-				<h1 class="sr-only"><?php _e( 'Posts navigation', 'musicwhore2014' ); ?></h1>
+				<h1 class="sr-only"><?php _e( 'Posts navigation', WP_TEXT_DOMAIN ); ?></h1>
 				<?php echo $links; ?>
 			</nav><!-- .navigation -->
 		<?php
@@ -69,7 +71,7 @@ class VigilantMedia2014_Template_Tags {
 
 		?>
 		<nav role="navigation">
-			<h4 class="sr-only"><?php _e( 'Post navigation', 'musicwhore2014' ); ?></h4>
+			<h4 class="sr-only"><?php _e( 'Post navigation', WP_TEXT_DOMAIN ); ?></h4>
 			<ul class="pager">
 				<?php if ( is_attachment() ) : ?>
 					<li><?php previous_post_link( '%link', __( 'Published In %title', 'musicwhore2015' ) ); ?></li>

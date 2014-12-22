@@ -14,8 +14,11 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 2.1
+ * @subpackage VigilantMedia2014 2.2
  */
+
+namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
+
 ?>
 <?php get_header(); ?>
 
@@ -28,13 +31,13 @@
 		<header>
 			<h2>
 				<?php if ( is_day() ) : ?>
-					<?php printf( __( 'Daily Archives: %s', 'vigilantmedia2014' ), get_the_date() ); ?>
+					<?php printf( __( 'Daily Archives: %s', WP_TEXT_DOMAIN ), get_the_date() ); ?>
 				<?php elseif ( is_month() ) : ?>
-					<?php printf( __( 'Monthly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'vigilantmedia2014' ) ) ); ?>
+					<?php printf( __( 'Monthly Archives: %s', WP_TEXT_DOMAIN ), get_the_date( _x( 'F Y', 'monthly archives date format', WP_TEXT_DOMAIN ) ) ); ?>
 				<?php elseif ( is_year() ) : ?>
-					<?php printf( __( 'Yearly Archives: %s', 'vigilantmedia2014' ), get_the_date( _x( 'Y', 'yearly archives date format', 'vigilantmedia2014' ) ) ); ?>
+					<?php printf( __( 'Yearly Archives: %s', WP_TEXT_DOMAIN ), get_the_date( _x( 'Y', 'yearly archives date format', WP_TEXT_DOMAIN ) ) ); ?>
 				<?php else : ?>
-					<?php _e( 'Archives', 'vigilantmedia2014' ); ?>
+					<?php _e( 'Archives', WP_TEXT_DOMAIN ); ?>
 				<?php endif; ?>
 			</h2>
 		</header><!-- .page-header -->
@@ -42,7 +45,7 @@
 		<?php while ( have_posts() ) : the_post(); // Start the Loop. ?>
 			<?php get_template_part( 'content', get_post_format() ); // Include the post format-specific template for the content. If you want to use this in a child theme, then include a file called called content-___.php (where ___ is the post format) and that will be used instead. ?>
 		<?php endwhile; ?>
-		<?php VigilantMedia2014_Template_Tags::paging_nav(); // Previous/next page navigation. ?>
+		<?php TemplateTags::paging_nav(); // Previous/next page navigation. ?>
 	<?php else : ?>
 		<?php get_template_part( 'content', 'none' ); // If no content, include the "No posts found" template. ?>
 	<?php endif; ?>
