@@ -14,7 +14,7 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 2.1
+ * @subpackage VigilantMedia2014 2.2
  */
 
 namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
