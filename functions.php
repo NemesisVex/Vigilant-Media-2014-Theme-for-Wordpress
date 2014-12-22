@@ -25,23 +25,25 @@
  * @subpackage VigilantMedia2014 1.0
  */
 
-/**
- * Set up the content width value based on the theme's design.
- *
- * @see vigilantmedia2014_content_width()
- *
- * @subpackage VigilantMedia2014 1.0
- */
+namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
 
-require get_template_directory() . '/lib/VigilantMedia2014_Filters.php';
-require get_template_directory() . '/lib/VigilantMedia2014_Template_Tags.php';
+const WP_TEXT_DOMAIN = 'vigilantmedia2014';
 
-add_filter( 'wp_page_menu_args', array( 'VigilantMedia2014_Filters', 'wp_page_menu_args' ) );
+if (!function_exists( __NAMESPACE__ . '\\autoload' )) {
+	function autoload( $class_name )
+	{
+		$class_name = ltrim($class_name, '\\');
+		if ( strpos( $class_name, __NAMESPACE__ ) !== 0 ) {
+			return;
+		}
 
-add_filter( 'wp_title', array( 'VigilantMedia2014_Filters', 'wp_title' ), 10, 2 );
+		$class_name = str_replace( __NAMESPACE__, '', $class_name );
 
-add_action( 'after_setup_theme', array( 'VigilantMedia2014_Filters', 'after_setup_theme' ) );
+		$path = get_template_directory() . '/lib' . str_replace('\\', DIRECTORY_SEPARATOR, $class_name) . '.php';
 
-add_action( 'widgets_init', array( 'VigilantMedia2014_Filters', 'widgets_init' ) );
+		require_once($path);
+	}
+}
 
-add_action( 'wp_enqueue_scripts', array( 'VigilantMedia2014_Filters', 'wp_enqueue_scripts' ) );
+spl_autoload_register(__NAMESPACE__ . '\\autoload');
+Setup::init();

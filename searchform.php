@@ -1,3 +1,4 @@
+<?php namespace VigilantMedia\WordPress\Themes\VigilantMedia2014; ?>
 <form role="search" method="get" class="form-inline" action="<?php echo home_url( '/' ); ?>">
 	<div class="form-group">
 		<label>
