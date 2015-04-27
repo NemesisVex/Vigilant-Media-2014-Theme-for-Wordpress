@@ -6,8 +6,11 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 2.1
+ * @subpackage VigilantMedia2014 2.2
  */
+
+namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -21,11 +24,6 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link href='//fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/typography.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/layout.css">
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -35,8 +33,8 @@
 			<nav class="navbar navbar-default navbar-static-top" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-nav"><?php /*_e( 'Primary Menu', 'vigilantmedia2014' );*/ ?>
-							<a class="screen-reader-text skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'vigilantmedia2014' ); ?></a>
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-nav"><?php /*_e( 'Primary Menu', WP_TEXT_DOMAIN );*/ ?>
+							<a class="screen-reader-text skip-link sr-only" href="#content"><?php _e( 'Skip to content', WP_TEXT_DOMAIN ); ?></a>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>

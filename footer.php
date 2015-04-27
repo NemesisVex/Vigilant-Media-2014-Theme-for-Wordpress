@@ -6,8 +6,11 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 1.0
+ * @subpackage VigilantMedia2014 2.2
  */
+
+namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
+
 ?>
 
 	</div><!-- #main -->
@@ -18,7 +21,7 @@
 
 		<div class="site-info">
 			<?php do_action( 'vigilantmedia2014_credits' ); ?>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'vigilantmedia2014' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'vigilantmedia2014' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( __( 'http://wordpress.org/', WP_TEXT_DOMAIN ) ); ?>"><?php printf( __( 'Proudly powered by %s', WP_TEXT_DOMAIN ), 'WordPress' ); ?></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 

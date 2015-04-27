@@ -6,8 +6,10 @@
  *
  * @package WordPress
  * @subpackage VigilantMedia2014
- * @subpackage VigilantMedia2014 1.0
+ * @subpackage VigilantMedia2014 2.2
  */
+
+namespace VigilantMedia\WordPress\Themes\VigilantMedia2014;
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -21,12 +23,12 @@
 		<div class="entry-meta">
 			<ul class="list-inline entry-meta-list">
 			<?php if ( 'post' == get_post_type() ) : ?>
-				<?php VigilantMedia2014_Template_Tags::posted_on(); ?>
+				<?php TemplateTags::posted_on(); ?>
 			<?php endif; ?>
 			<?php if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) : ?>
-				<li><span class="glyphicon glyphicon-comment"></span> <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'vigilantmedia2014' ), __( '1 Comment', 'vigilantmedia2014' ), __( '% Comments', 'vigilantmedia2014' ) ); ?></span></li>
+				<li><span class="glyphicon glyphicon-comment"></span> <span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', WP_TEXT_DOMAIN ), __( '1 Comment', WP_TEXT_DOMAIN ), __( '% Comments', WP_TEXT_DOMAIN ) ); ?></span></li>
 			<?php endif; ?>
-			<?php edit_post_link( __( 'Edit', 'vigilantmedia2014' ), '<li><span class="glyphicon glyphicon-pencil"></span> <span class="edit-link">', '</span></li>' ); ?>
+			<?php edit_post_link( __( 'Edit', WP_TEXT_DOMAIN ), '<li><span class="glyphicon glyphicon-pencil"></span> <span class="edit-link">', '</span></li>' ); ?>
 			</ul>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
@@ -38,9 +40,9 @@
 	<?php else : ?>
 	<div class="entry-content">
 		<?php
-			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'vigilantmedia2014' ) );
+			the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', WP_TEXT_DOMAIN ) );
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'vigilantmedia2014' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', WP_TEXT_DOMAIN ) . '</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
