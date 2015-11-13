@@ -1,0 +1,97 @@
+/*
+Theme Name: Vigilant Media 2014
+Author: Greg Bueno
+Author URI: http://musicwhore.org/
+Description: A WordPress theme customized for Musicwhore.org, based on the Twenty Fourteen Theme by Wordpress.
+Version: 2.3
+Text Domain: vigilantmedia2014
+*/
+/* 
+    Created on : May 25, 2014, 7:18:09 AM
+    Author     : gregbueno
+*/
+.navbar-default {
+  background-color: #8B99B9;
+  background-image: linear-gradient(bottom, #667f80, #8b99b9 25px);
+  background-image: -o-linear-gradient(bottom, #667f80, #8b99b9 25px);
+  background-image: -moz-linear-gradient(bottom, #667f80, #8b99b9 25px);
+  background-image: -webkit-linear-gradient(top, #667f80, #8b99b9 25px);
+  background-image: -ms-linear-gradient(bottom, #667f80, #8b99b9 25px); }
+
+.entry-meta {
+  background-color: #EEE; }
+
+.entry-meta-list {
+  margin-left: 5px; }
+
+.comment-list {
+  list-style: none;
+  padding-bottom: 1em; }
+
+.comment-author {
+  position: relative; }
+  .comment-author .avatar {
+    height: 34px;
+    top: 2px;
+    width: 34px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    position: absolute;
+    left: 0; }
+
+.comment-author, .comment-awaiting-moderation, .comment-content, .comment-list .reply, .comment-metadata {
+  padding-left: 50px; }
+
+.comments-title {
+  padding-bottom: 1em; }
+
+.says {
+  display: none; }
+
+.content-area {
+  border-right: 1px solid #CCC; }
+
+/* 
+    Created on : May 25, 2014, 7:18:16 AM
+    Author     : gregbueno
+*/
+@font-face {
+  font-family: "Novecentowide";
+  src: url("assets/fonts/Novecentowide-Bold-webfont.eot");
+  src: url("assets/fonts/Novecentowide-Bold-webfont.eot?iefix") format("eot"), url("assets/fonts/Novecentowide-Bold-webfont.woff") format("woff"), url("assets/fonts/Novecentowide-Bold-webfont.ttf") format("truetype"), url("assets/fonts/Novecentowide-Bold-webfont.svg#webfont") format("svg");
+  font-weight: bold; }
+@font-face {
+  font-family: "Novecentowide";
+  src: url("assets/fonts/Novecentowide-Book-webfont.eot");
+  src: url("assets/fonts/Novecentowide-Book-webfont.eot?iefix") format("eot"), url("assets/fonts/Novecentowide-Book-webfont.woff") format("woff"), url("assets/fonts/Novecentowide-Book-webfont.ttf") format("truetype"), url("assets/fonts/Novecentowide-Book-webfont.svg#webfont") format("svg"); }
+body {
+  line-height: 2em; }
+
+.navbar-default .navbar-brand {
+  font-family: Novecentowide, Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  color: #FFF; }
+.navbar-default .navbar-brand:hover {
+  color: #FFF; }
+.navbar-default .navbar-nav > li > a {
+  color: #FFF; }
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FFF; }
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #DDD; }
+.navbar-default .navbar-toggle:hover {
+  background-color: #AAA; }
+
+h3.widget-title {
+  font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 18px; }
+
+h3.entry-title {
+  font-family: Bitter, Times, serif; }
+
+@media (max-width: 768px) {
+  .navbar-default .navbar-brand {
+    font-size: 20px; } }
+
+/*# sourceMappingURL=style.dev.css.map */
