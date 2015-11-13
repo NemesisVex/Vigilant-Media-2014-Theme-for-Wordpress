@@ -85,8 +85,6 @@ class Setup {
 		wp_enqueue_style( 'musicwhore2014-font-bitter', '//fonts.googleapis.com/css?family=Bitter:400,700,400italic' );
 
 		wp_enqueue_style( 'musicwhore2014-style', get_stylesheet_uri() );
-		wp_enqueue_style( 'musicwhore2014-typography', get_stylesheet_directory_uri() . '/css/typography.css' );
-		wp_enqueue_style( 'musicwhore2014-layout', get_stylesheet_directory_uri() . '/css/layout.css' );
 	}
 
 	public static function wp_page_menu_args( $args ) {
